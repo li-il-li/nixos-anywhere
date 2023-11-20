@@ -2,8 +2,7 @@
 , openssh
 , gitMinimal
 , rsync
-, nixVersions
-, nix
+, nixUnstable
 , coreutils
 , curl
 , gnugrep
@@ -18,8 +17,7 @@
 let
   runtimeDeps = [
     gitMinimal # for git flakes
-    # pinned because nix-copy-closure hangs if ControlPath provided for SSH: https://github.com/NixOS/nix/issues/8480
-    (if lib.versionAtLeast nix.version "2.16" then nix else nixVersions.nix_2_16)
+    nixUnstable
     coreutils
     curl # when uploading tarballs
     gnugrep
