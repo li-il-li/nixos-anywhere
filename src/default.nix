@@ -2,7 +2,7 @@
 , openssh
 , gitMinimal
 , rsync
-, nixUnstable
+, nixVersions
 , coreutils
 , curl
 , gnugrep
@@ -17,7 +17,7 @@
 let
   runtimeDeps = [
     gitMinimal # for git flakes
-    nixUnstable
+    nixVersions.nix_2_16
     coreutils
     curl # when uploading tarballs
     gnugrep
