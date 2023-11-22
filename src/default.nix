@@ -17,7 +17,7 @@
 let
   runtimeDeps = [
     gitMinimal # for git flakes
-    nixVersions.nix_2_16
+    nixVersions.nix_2_13
     coreutils
     curl # when uploading tarballs
     gnugrep
