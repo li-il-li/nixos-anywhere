@@ -423,6 +423,7 @@ if [[ -z ${disko_script-} ]] && [[ ${build_on_remote-n} == "y" ]]; then
   )
 fi
 step Formatting hard drive with disko
+nix --version
 nix_copy --to "ssh://$ssh_connection" "$disko_script"
 ssh_ "$disko_script"
 
